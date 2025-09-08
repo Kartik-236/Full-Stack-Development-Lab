@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+<title>my bootstrap</title> 
+</head>
+<body>
+<form>
+<!-- EMAIL SUBMISSION -->
+<div class="form-group">
+<label for="exampleInputEmail1">Email address</label> 
+<input type="email" class="form-control" id="exampleInputEmail1" ariadescribedby="emailHelp" placeholder="Enter email">
+<small id="emailHelp" class="form-text textmuted">We'll never share your email with anyone else.</small>
+</div>
+
+<!-- PASSWORD -->
+<div class="form-group">
+<label for="exampleInputPassword1">Password</label>
+<input type="password" class="formcontrol" id="exampleInputPassword1" placeholder="Password">
+</div>
+<!-- DROPDOWN SELECT -->
+<div class="form-group">
+<label for="exampleSelect1">Example select</label>
+<select class="form-control" id="exampleSelect1">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+</div>
+<!-- MULTIPLE SELECT OPTIONS -->
+<div class="form-group">
+<label for="exampleSelect2">Example multiple select</label>
+<select multiple class="form-control" id="exampleSelect2">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+</div>
+<!-- TEXT AREA -->
+<div class="form-group">
+<label for="exampleTextarea">Example textarea</label>
+<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+</div>
+<!-- FILE UPLOAD INPUT -->
+<div class="form-group"> 
+<label for="exampleInputFile">File input</label>
+<input type="file" class="form-control-file" id="exampleInputFile" ariadescribedby="fileHelp">
+<small id="fileHelp" class="form-text textmuted">This is some placeholder blocklevel help text for the above input. It's a bit lighter and easily wraps to a new line.
+</small>
+</div>
+
+<!-- RADIO BUTTONS -->
+<fieldset class="form-group">
+<legend>Radio buttons</legend>
+<div class="form-check">
+<label class="form-check-label">
+<input type="radio" class="form-checkinput" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+Option one is this and that—be sure to include why it's great
+</label>
+</div>
+
+<div class="form-check">
+<label class="form-check-label">
+<input type="radio" class="form-checkinput" name="optionsRadios" id="optionsRadios2" value="option2">
+Option two can be something else and selecting it will deselect option one
+</label>
+</div>
+
+<div class="form-check disabled">
+<label class="form-check-label">
+<input type="radio" class="form-checkinput" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+Option three is disabled
+</label>
+</div>
+</fieldset>
+<!-- CHECK BUTTON -->
+<div class="form-check">
+<label class="form-check-label">
+<input type="checkbox" class="form-check-input">
+Check me out
+</label>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form> 
+</div>
+</body>
+</html> 

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+  <style>
+    tr,td,th{
+      border: 1px solid yellow;
+      padding: 20px
+    }
+    thead th{
+      background-color: green;
+      padding: 8px;
+      border: 1px solid blue; 
+    }
+    tbody td{
+      background-color: green;
+      padding: 8px;
+      border: 1px yellow;
+    }
+  </style>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Simple Form</title>
+
+</head>
+
+<body>
+
+  <h1>Personal Information Form</h1>
+
+  <form>
+
+    <label for="name">Name:</label><br />
+
+    <input type="text" id="name" name="name"  placeholder="enter your name" /><br /><br />
+
+    <label for="address">Address:</label><br />
+
+    <textarea id="address" name="address" rows="3" cols="30"  placeholder="enter address"></textarea><br /><br />
+
+    <label for="email">Email:</label><br />
+
+    <input type="email" id="email" name="email"   placeholder="enter your email"/><br /><br />
+
+    <label for="mobile">Mobile Number:</label><br />
+
+    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="10-digit number"  /><br /><br />
+
+    <label for="state">State:</label><br />
+
+    <input type="text" id="state" name="state" placeholder="state" /><br /><br />
+
+    <p>Qualification</p>
+    <input type="checkbox" id="SSC" name="SSC" value="SSC">
+    <label for="SSC"> SSC</label><br>
+    <input type="checkbox" id="HSC" name="HSC" value="HSC">
+    <label for="HSC">HSC</label><br>
+    <input type="checkbox" id="BE" name="BE" value="BE">
+    <label for="BE"> BE</label><br><br>
+    <p>Gender</p>
+    <input type="radio" id="male" name="male" value="male">
+    <label for="male">male</label><br>
+    <input type="radio" id="female" name="female" value="female">
+    <label for="female">female</label><br>
+
+   
+
+   
+    <label for="dob">Date of Birth:</label><br />
+
+    <input type="date" id="dob" name="dob"  /><br /><br />
+
+    <input type="submit" value="Submit" />
+     <input type="reset" value="Cancel" />
+
+  </form>
+
+ <table wodth="40">
+  <tr>
+    <th>  Roll No.</th>
+    <th colspan="2">  Name</th>
+    <th>  Class</th>
+    <th>  Address</th>
+    <th>  Mobile No.</th>
+  </tr>
+  <tr>
+    <td> 01</td>
+    <td> ABC</td>
+    <td> 12</td>
+    <td rowspan="3"> 12,Avish Apartments</td>
+    <td> 123-456</td>
+
+  </tr>
+  <tr>
+    <td> 02</td>
+    <td> DEF</td>
+    <td> 11</td>
+    <td rowspan="4"> 23,Avish Apartments</td>
+    <td> 789-456</td>
+
+  </tr>
+
+ </table>
+
+
+
+
+
+</body>
+
+</html>
+
+
