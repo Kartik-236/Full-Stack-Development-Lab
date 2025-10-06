@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #74ebd5, #acb6e5);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 450px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+    input:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0,123,255,0.4);
+      outline: none;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .error {
+      color: red;
+      font-size: 13px;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+    ::placeholder {
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Student Registration</h2>
+    <form id="regForm" onsubmit="return validateForm()">
+      <input type="text" id="username" placeholder="Username">
+      <div id="userError" class="error"></div>
+
+      <input type="text" id="email" placeholder="Email">
+      <div id="emailError" class="error"></div>
+
+      <input type="text" id="phone" placeholder="Phone Number">
+      <div id="phoneError" class="error"></div>
+
+      <input type="password" id="password" placeholder="Password">
+      <div id="passError" class="error"></div>
+
+      <input type="password" id="confirmPassword" placeholder="Confirm Password">
+      <div id="confirmError" class="error"></div>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      let username = document.getElementById("username").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let phone = document.getElementById("phone").value.trim();
+      let password = document.getElementById("password").value.trim();
+      let confirmPassword = document.getElementById("confirmPassword").value.trim();
+      let valid = true;
+
+      document.getElementById("userError").innerText = "";
+      document.getElementById("emailError").innerText = "";
+      document.getElementById("phoneError").innerText = "";
+      document.getElementById("passError").innerText = "";
+      document.getElementById("confirmError").innerText = "";
+
+      if(username === "") { document.getElementById("userError").innerText="Username required"; valid=false; }
+
+      let emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z]{3}\.[A-Za-z]{2,3}$/;
+      if(!emailPattern.test(email)) { document.getElementById("emailError").innerText="Invalid email"; valid=false; }
+
+      if(!/^[0-9]{10}$/.test(phone)) { document.getElementById("phoneError").innerText="Phone must be 10 digits"; valid=false; }
+
+      let passPattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[&$#@]).{7,}$/;
+      if(!passPattern.test(password)) { document.getElementById("passError").innerText="Password must be 7+ chars with 1 uppercase, 1 digit & 1 special (&,$,#,@)"; valid=false; }
+
+      if(password !== confirmPassword) { document.getElementById("confirmError").innerText="Passwords do not match"; valid=false; }
+
+      return valid;
+    }
+  </script>
+
+</body>
+</html>
